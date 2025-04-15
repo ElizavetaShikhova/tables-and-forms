@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Форма выбора питомца</title>
@@ -8,9 +8,75 @@
 <body>
 <main>
     <h1>Найди себе друга!</h1>
+    <form action="/pets/orders" method="POST" id="form">
+        <label>
+            Тип животного
+            <select name="petType">
+                <option value="cat" selected>Кошечка</option>
+                <option value="dog">Собачка</option>
+                <option value="tiger">Тигр</option>
+            </select>
+        </label>
+        <br>
 
-    <!--Форму размещай тут-->
+        <label>
+            <input type="radio" name="gender" value="boy" checked> Мальчик
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="gender" value="girl"> Девочка
+        </label>
+        <br>
+        <label>
+            <input type="radio" name="gender" value="none"> Хз
+        </label>
+        <br>
 
+        <label>
+            Цвет глаз
+            <input type="color" name="eyeColor" value="#000000">
+        </label>
+        <br>
+
+        <label>
+            Длина хвоста
+            <input type="number" name="tailLength" value="20">
+        </label>
+        <br>
+
+        <label>
+            Имя
+            <input type="text" name="name" placeholder="Ваше имя" value="Макс">
+        </label>
+        <br>
+
+        <label>
+            Дата рождения
+            <input type="date" name="dateOfBirth" value="2020-01-01">
+        </label>
+        <br>
+
+        <label>
+            Email
+            <input type="email" name="email" placeholder="Ваш Email" value="meaw@mail.com">
+        </label>
+        <br>
+
+        <label>
+            Номер телефона
+            <input type="tel" name="phone" value="+70000000000">
+        </label>
+        <br>
+
+        <label>
+            Правила
+            <input type="checkbox" name="rules" value="true" checked>
+        </label>
+        <br>
+
+        <input type="submit" name="submit" value="Отправить">
+        <input type="reset" name="reset" value="Давай по новой">
+    </form>
 </main>
 </body>
 </html>
